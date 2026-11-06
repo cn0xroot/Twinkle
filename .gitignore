@@ -1,0 +1,12 @@
+# 需求文档
+需求.md
+
+# macOS
+.DS_Store
+
+# Xcode
+build/
+DerivedData/
+xcuserdata/
+*.xcuserstate
+*.xcresult

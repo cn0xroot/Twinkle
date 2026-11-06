@@ -1,0 +1,68 @@
+name: Twinkle
+options:
+  bundleIdPrefix: com.twinkle
+  createIntermediateGroups: true
+  deploymentTarget:
+    macOS: "14.0"
+    iOS: "17.0"
+    watchOS: "10.0"
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+targets:
+  TwinkleMac:
+    type: application
+    platform: macOS
+    sources: [Shared/Core, Shared/Speech, Shared/UI, Mac]
+    info:
+      path: Mac/Info.plist
+      properties:
+        CFBundleDisplayName: Twinkle
+        LSApplicationCategoryType: public.app-category.productivity
+        NSMicrophoneUsageDescription: 用于语音输入并实时翻译
+        NSSpeechRecognitionUsageDescription: 用于把你的语音识别成文字后翻译
+    settings:
+      base:
+        PRODUCT_NAME: Twinkle
+        PRODUCT_BUNDLE_IDENTIFIER: com.twinkle.mac
+        ARCHS: "arm64 x86_64"   # Universal:Apple 芯片 + Intel
+        ONLY_ACTIVE_ARCH: NO
+        CODE_SIGN_IDENTITY: "-"
+        ENABLE_HARDENED_RUNTIME: NO
+  TwinkleiOS:
+    type: application
+    platform: iOS
+    sources: [Shared/Core, Shared/Speech, Shared/UI, iOS]
+    dependencies:
+      - target: TwinkleWatch
+        embed: true
+    info:
+      path: iOS/Info.plist
+      properties:
+        CFBundleDisplayName: Twinkle
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+        UISupportedInterfaceOrientations~ipad: [UIInterfaceOrientationPortrait, UIInterfaceOrientationLandscapeLeft, UIInterfaceOrientationLandscapeRight]
+        NSMicrophoneUsageDescription: 用于语音输入并实时翻译
+        NSSpeechRecognitionUsageDescription: 用于把你的语音识别成文字后翻译
+    settings:
+      base:
+        PRODUCT_NAME: Twinkle
+        PRODUCT_BUNDLE_IDENTIFIER: com.twinkle.app
+        TARGETED_DEVICE_FAMILY: "1,2"
+  TwinkleWatch:
+    type: application
+    platform: watchOS
+    sources: [Shared/Core, Watch]
+    info:
+      path: Watch/Info.plist
+      properties:
+        CFBundleDisplayName: Twinkle
+        WKApplication: true
+        WKCompanionAppBundleIdentifier: com.twinkle.app
+    settings:
+      base:
+        PRODUCT_NAME: Twinkle
+        PRODUCT_BUNDLE_IDENTIFIER: com.twinkle.app.watchkitapp

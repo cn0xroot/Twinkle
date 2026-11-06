@@ -1,0 +1,625 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07B7D5AA383ACB807E26B06D /* TwinkleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B80E3CF9459F2C59870B50 /* TwinkleApp.swift */; };
+		08C89D1B706F0268CB4F93E5 /* EntryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEEC5E2BB949D19C73A4DCF /* EntryCard.swift */; };
+		1EE2598C0476D50CB9BFECDB /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082D1470E843C88EA9DF1D36 /* Models.swift */; };
+		21F9D027B31D04B4426F76C6 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082D1470E843C88EA9DF1D36 /* Models.swift */; };
+		255010B43F473105A1B2DD9F /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC53ACA157E087E1C84E3C9 /* Speaker.swift */; };
+		29E99C9D711E3FFD2CF8E536 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D0650E86D8A9FE15BC3570 /* Theme.swift */; };
+		300D492EF0BEE1D6FFCDF4DF /* WatchSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894DD3EF98CDA9A24F039066 /* WatchSync.swift */; };
+		3225C8F089EAB2448E1934ED /* TranslatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267E80D0D2DE70CED8C720B /* TranslatorViewModel.swift */; };
+		358F7D581770DDCD4B7394A3 /* TranslationClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4410635EA8006000F4F3946C /* TranslationClient.swift */; };
+		4482D13347AB1577CC855B09 /* TwinkleMacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F52995580913CC61E29C60 /* TwinkleMacApp.swift */; };
+		44B9090321AB01FFA7836A89 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B584EAA5E7EA8F5EF790B4 /* Keychain.swift */; };
+		4DD903DCC25EA490AF79E27F /* TranslatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCEF9CC08F0C1531E62DE9A /* TranslatorView.swift */; };
+		4EB468C2FD9A7A265D24240C /* TTSSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B764D99EE7008D66E81145 /* TTSSettings.swift */; };
+		5AC76B6BFA1AC901B034B38E /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082D1470E843C88EA9DF1D36 /* Models.swift */; };
+		601999A9B0B3FED2050DF770 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45403ED9B9E011C7CDEB830C /* SettingsView.swift */; };
+		6B33689B67D1B165DC5E20E4 /* TTSSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B764D99EE7008D66E81145 /* TTSSettings.swift */; };
+		7135A398A3E883C6D2CE7CF0 /* TranslationClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4410635EA8006000F4F3946C /* TranslationClient.swift */; };
+		74DE6CB5172CBF1F9FAFB72C /* EntryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEEC5E2BB949D19C73A4DCF /* EntryCard.swift */; };
+		7589CC495EBBEFEF0F0B258C /* TranslatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267E80D0D2DE70CED8C720B /* TranslatorViewModel.swift */; };
+		76BC98FE1FD3BADBA3AAEA5C /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D0650E86D8A9FE15BC3570 /* Theme.swift */; };
+		7E46565E0D57EE1FBFF22014 /* SpeechInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3AAFF9CDC4398914678B74 /* SpeechInput.swift */; };
+		8AA5BDDAD2F792A3021BF66F /* WatchSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894DD3EF98CDA9A24F039066 /* WatchSync.swift */; };
+		9209864C9710E497BC153DBF /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC53ACA157E087E1C84E3C9 /* Speaker.swift */; };
+		959EB8CAA5A13E864DA25282 /* TwinkleWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793C709A27504081AEB7ED76 /* TwinkleWatchApp.swift */; };
+		99DEFABC51C559BAD968B6D6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45403ED9B9E011C7CDEB830C /* SettingsView.swift */; };
+		9A37140C62047742A6B13E56 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B584EAA5E7EA8F5EF790B4 /* Keychain.swift */; };
+		A4601ED051D149008B835184 /* WatchSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894DD3EF98CDA9A24F039066 /* WatchSync.swift */; };
+		A911124E1FD7DA3553356B10 /* SpeechInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3AAFF9CDC4398914678B74 /* SpeechInput.swift */; };
+		AACBF173450EF3680319BEB0 /* TranslatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267E80D0D2DE70CED8C720B /* TranslatorViewModel.swift */; };
+		B8C8342A948AB402FED7B984 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819209E80488BDA29FC34301 /* AppSettings.swift */; };
+		BC7D79AE69346F826D2BDA3A /* EntryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEEC5E2BB949D19C73A4DCF /* EntryCard.swift */; };
+		BDC4468C1CACD297E761239F /* TTSSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B764D99EE7008D66E81145 /* TTSSettings.swift */; };
+		BED9723EB180A161CA8A8655 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D0650E86D8A9FE15BC3570 /* Theme.swift */; };
+		C15A8ECFB4A371748D239EE0 /* TranslatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCEF9CC08F0C1531E62DE9A /* TranslatorView.swift */; };
+		C449DCCAE8D118C414F7EC63 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819209E80488BDA29FC34301 /* AppSettings.swift */; };
+		C6884938A012A1076ED1B959 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B584EAA5E7EA8F5EF790B4 /* Keychain.swift */; };
+		CE4500AB7F28362556B7F1F4 /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC53ACA157E087E1C84E3C9 /* Speaker.swift */; };
+		CECE873A9D49563352A2895D /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819209E80488BDA29FC34301 /* AppSettings.swift */; };
+		D13BCB7851BA1EEEB58EF654 /* WatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C063715E911F12F6F8F4A0 /* WatchView.swift */; };
+		D2F95C7A4C813501849F5617 /* TranslationClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4410635EA8006000F4F3946C /* TranslationClient.swift */; };
+		E19E751D3D5D6AC35687489B /* TwinkleWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 26253E455299D8B40138ABE6 /* TwinkleWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		29D7C663A88111A0E801DF49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8BE0DB78FEB4F5F3D1486F4D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 02742CB410961F8402125C31;
+			remoteInfo = TwinkleWatch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		420E748ED28EB9715A3DB398 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				E19E751D3D5D6AC35687489B /* TwinkleWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		04F52995580913CC61E29C60 /* TwinkleMacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwinkleMacApp.swift; sourceTree = "<group>"; };
+		082D1470E843C88EA9DF1D36 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		0F3AAFF9CDC4398914678B74 /* SpeechInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechInput.swift; sourceTree = "<group>"; };
+		10B584EAA5E7EA8F5EF790B4 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		1267E80D0D2DE70CED8C720B /* TranslatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatorViewModel.swift; sourceTree = "<group>"; };
+		13C063715E911F12F6F8F4A0 /* WatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchView.swift; sourceTree = "<group>"; };
+		26253E455299D8B40138ABE6 /* TwinkleWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwinkleWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FC53ACA157E087E1C84E3C9 /* Speaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speaker.swift; sourceTree = "<group>"; };
+		2FFD50F0D89023B831FE28A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		32EE3E26F61FBEB64BB93A69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3EEDB4054C438F8A4509E036 /* TwinkleiOS.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = TwinkleiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		43B764D99EE7008D66E81145 /* TTSSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTSSettings.swift; sourceTree = "<group>"; };
+		4410635EA8006000F4F3946C /* TranslationClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationClient.swift; sourceTree = "<group>"; };
+		45403ED9B9E011C7CDEB830C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		53B80E3CF9459F2C59870B50 /* TwinkleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwinkleApp.swift; sourceTree = "<group>"; };
+		5CEEC5E2BB949D19C73A4DCF /* EntryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryCard.swift; sourceTree = "<group>"; };
+		793C709A27504081AEB7ED76 /* TwinkleWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwinkleWatchApp.swift; sourceTree = "<group>"; };
+		819209E80488BDA29FC34301 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		894DD3EF98CDA9A24F039066 /* WatchSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSync.swift; sourceTree = "<group>"; };
+		8DCEF9CC08F0C1531E62DE9A /* TranslatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatorView.swift; sourceTree = "<group>"; };
+		A5D0650E86D8A9FE15BC3570 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		A9E47DEE5E3DCF520A52086E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D20F25FAE878DCCDA6F2C391 /* TwinkleMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwinkleMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		032D7612E959398F1FB7F437 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				819209E80488BDA29FC34301 /* AppSettings.swift */,
+				5CEEC5E2BB949D19C73A4DCF /* EntryCard.swift */,
+				10B584EAA5E7EA8F5EF790B4 /* Keychain.swift */,
+				082D1470E843C88EA9DF1D36 /* Models.swift */,
+				2FC53ACA157E087E1C84E3C9 /* Speaker.swift */,
+				A5D0650E86D8A9FE15BC3570 /* Theme.swift */,
+				4410635EA8006000F4F3946C /* TranslationClient.swift */,
+				1267E80D0D2DE70CED8C720B /* TranslatorViewModel.swift */,
+				43B764D99EE7008D66E81145 /* TTSSettings.swift */,
+				894DD3EF98CDA9A24F039066 /* WatchSync.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		1EB7543C544979F70E883575 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				45403ED9B9E011C7CDEB830C /* SettingsView.swift */,
+				8DCEF9CC08F0C1531E62DE9A /* TranslatorView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		66F868F59E99FBB3CC9A3922 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				2FFD50F0D89023B831FE28A7 /* Info.plist */,
+				53B80E3CF9459F2C59870B50 /* TwinkleApp.swift */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		6ABFBC0707DBE6656E3FA777 /* Watch */ = {
+			isa = PBXGroup;
+			children = (
+				A9E47DEE5E3DCF520A52086E /* Info.plist */,
+				793C709A27504081AEB7ED76 /* TwinkleWatchApp.swift */,
+				13C063715E911F12F6F8F4A0 /* WatchView.swift */,
+			);
+			path = Watch;
+			sourceTree = "<group>";
+		};
+		78A842BE44A8DD5EC63DE473 /* Speech */ = {
+			isa = PBXGroup;
+			children = (
+				0F3AAFF9CDC4398914678B74 /* SpeechInput.swift */,
+			);
+			path = Speech;
+			sourceTree = "<group>";
+		};
+		8A8D6A748FC8F758E311D723 /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				32EE3E26F61FBEB64BB93A69 /* Info.plist */,
+				04F52995580913CC61E29C60 /* TwinkleMacApp.swift */,
+			);
+			path = Mac;
+			sourceTree = "<group>";
+		};
+		B298D5FA955C850B65376153 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3EEDB4054C438F8A4509E036 /* TwinkleiOS.app */,
+				D20F25FAE878DCCDA6F2C391 /* TwinkleMac.app */,
+				26253E455299D8B40138ABE6 /* TwinkleWatch.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C0BE7C7419B3D4AB2615167D /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				032D7612E959398F1FB7F437 /* Core */,
+				78A842BE44A8DD5EC63DE473 /* Speech */,
+				1EB7543C544979F70E883575 /* UI */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		E70772580B8268BA7B0BCB36 = {
+			isa = PBXGroup;
+			children = (
+				66F868F59E99FBB3CC9A3922 /* iOS */,
+				8A8D6A748FC8F758E311D723 /* Mac */,
+				C0BE7C7419B3D4AB2615167D /* Shared */,
+				6ABFBC0707DBE6656E3FA777 /* Watch */,
+				B298D5FA955C850B65376153 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		02742CB410961F8402125C31 /* TwinkleWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F91DBB68D854B731CA96D709 /* Build configuration list for PBXNativeTarget "TwinkleWatch" */;
+			buildPhases = (
+				0E39DBD403567BC2B201F9FC /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TwinkleWatch;
+			packageProductDependencies = (
+			);
+			productName = TwinkleWatch;
+			productReference = 26253E455299D8B40138ABE6 /* TwinkleWatch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		305668D6561337023F338675 /* TwinkleMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6010747A441DFC6CE715D973 /* Build configuration list for PBXNativeTarget "TwinkleMac" */;
+			buildPhases = (
+				92F8801D9C2E2D81B4890AA6 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TwinkleMac;
+			packageProductDependencies = (
+			);
+			productName = TwinkleMac;
+			productReference = D20F25FAE878DCCDA6F2C391 /* TwinkleMac.app */;
+			productType = "com.apple.product-type.application";
+		};
+		991EF2AA49371FCA4E6D0F10 /* TwinkleiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C4BC611758485DAD2289D8E /* Build configuration list for PBXNativeTarget "TwinkleiOS" */;
+			buildPhases = (
+				EC7D1CBA5F8220832CDD77E8 /* Sources */,
+				420E748ED28EB9715A3DB398 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B04251E45BBFF56AAE3527C /* PBXTargetDependency */,
+			);
+			name = TwinkleiOS;
+			packageProductDependencies = (
+			);
+			productName = TwinkleiOS;
+			productReference = 3EEDB4054C438F8A4509E036 /* TwinkleiOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8BE0DB78FEB4F5F3D1486F4D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = 3EE865761FD87E143FF4D4DB /* Build configuration list for PBXProject "Twinkle" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = E70772580B8268BA7B0BCB36;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = B298D5FA955C850B65376153 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				305668D6561337023F338675 /* TwinkleMac */,
+				991EF2AA49371FCA4E6D0F10 /* TwinkleiOS */,
+				02742CB410961F8402125C31 /* TwinkleWatch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0E39DBD403567BC2B201F9FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8C8342A948AB402FED7B984 /* AppSettings.swift in Sources */,
+				08C89D1B706F0268CB4F93E5 /* EntryCard.swift in Sources */,
+				44B9090321AB01FFA7836A89 /* Keychain.swift in Sources */,
+				1EE2598C0476D50CB9BFECDB /* Models.swift in Sources */,
+				CE4500AB7F28362556B7F1F4 /* Speaker.swift in Sources */,
+				6B33689B67D1B165DC5E20E4 /* TTSSettings.swift in Sources */,
+				76BC98FE1FD3BADBA3AAEA5C /* Theme.swift in Sources */,
+				D2F95C7A4C813501849F5617 /* TranslationClient.swift in Sources */,
+				3225C8F089EAB2448E1934ED /* TranslatorViewModel.swift in Sources */,
+				959EB8CAA5A13E864DA25282 /* TwinkleWatchApp.swift in Sources */,
+				300D492EF0BEE1D6FFCDF4DF /* WatchSync.swift in Sources */,
+				D13BCB7851BA1EEEB58EF654 /* WatchView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92F8801D9C2E2D81B4890AA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C449DCCAE8D118C414F7EC63 /* AppSettings.swift in Sources */,
+				BC7D79AE69346F826D2BDA3A /* EntryCard.swift in Sources */,
+				9A37140C62047742A6B13E56 /* Keychain.swift in Sources */,
+				5AC76B6BFA1AC901B034B38E /* Models.swift in Sources */,
+				601999A9B0B3FED2050DF770 /* SettingsView.swift in Sources */,
+				255010B43F473105A1B2DD9F /* Speaker.swift in Sources */,
+				7E46565E0D57EE1FBFF22014 /* SpeechInput.swift in Sources */,
+				4EB468C2FD9A7A265D24240C /* TTSSettings.swift in Sources */,
+				BED9723EB180A161CA8A8655 /* Theme.swift in Sources */,
+				358F7D581770DDCD4B7394A3 /* TranslationClient.swift in Sources */,
+				4DD903DCC25EA490AF79E27F /* TranslatorView.swift in Sources */,
+				7589CC495EBBEFEF0F0B258C /* TranslatorViewModel.swift in Sources */,
+				4482D13347AB1577CC855B09 /* TwinkleMacApp.swift in Sources */,
+				A4601ED051D149008B835184 /* WatchSync.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC7D1CBA5F8220832CDD77E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CECE873A9D49563352A2895D /* AppSettings.swift in Sources */,
+				74DE6CB5172CBF1F9FAFB72C /* EntryCard.swift in Sources */,
+				C6884938A012A1076ED1B959 /* Keychain.swift in Sources */,
+				21F9D027B31D04B4426F76C6 /* Models.swift in Sources */,
+				99DEFABC51C559BAD968B6D6 /* SettingsView.swift in Sources */,
+				9209864C9710E497BC153DBF /* Speaker.swift in Sources */,
+				A911124E1FD7DA3553356B10 /* SpeechInput.swift in Sources */,
+				BDC4468C1CACD297E761239F /* TTSSettings.swift in Sources */,
+				29E99C9D711E3FFD2CF8E536 /* Theme.swift in Sources */,
+				7135A398A3E883C6D2CE7CF0 /* TranslationClient.swift in Sources */,
+				C15A8ECFB4A371748D239EE0 /* TranslatorView.swift in Sources */,
+				AACBF173450EF3680319BEB0 /* TranslatorViewModel.swift in Sources */,
+				07B7D5AA383ACB807E26B06D /* TwinkleApp.swift in Sources */,
+				8AA5BDDAD2F792A3021BF66F /* WatchSync.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2B04251E45BBFF56AAE3527C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 02742CB410961F8402125C31 /* TwinkleWatch */;
+			targetProxy = 29D7C663A88111A0E801DF49 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2824524D7B35FE847CFD5A27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Watch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.twinkle.app.watchkitapp;
+				PRODUCT_NAME = Twinkle;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Release;
+		};
+		284FA7BBA6AD3B024DFAE6D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Watch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.twinkle.app.watchkitapp;
+				PRODUCT_NAME = Twinkle;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Debug;
+		};
+		7D29389DAA30DEE37C608111 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		86DFE91CCC3C16A849FC3286 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = iOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.twinkle.app;
+				PRODUCT_NAME = Twinkle;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A5EA9984DB4A940D2855E8C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		A61AFC2F50392BA810285322 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = iOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.twinkle.app;
+				PRODUCT_NAME = Twinkle;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E4BE731E1BCA62D8EDB9F360 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "arm64 x86_64";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
+				INFOPLIST_FILE = Mac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.twinkle.mac;
+				PRODUCT_NAME = Twinkle;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E7EC2EF153F59FCD50DE070B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "arm64 x86_64";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
+				INFOPLIST_FILE = Mac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.twinkle.mac;
+				PRODUCT_NAME = Twinkle;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0C4BC611758485DAD2289D8E /* Build configuration list for PBXNativeTarget "TwinkleiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86DFE91CCC3C16A849FC3286 /* Debug */,
+				A61AFC2F50392BA810285322 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		3EE865761FD87E143FF4D4DB /* Build configuration list for PBXProject "Twinkle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5EA9984DB4A940D2855E8C6 /* Debug */,
+				7D29389DAA30DEE37C608111 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		6010747A441DFC6CE715D973 /* Build configuration list for PBXNativeTarget "TwinkleMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7EC2EF153F59FCD50DE070B /* Debug */,
+				E4BE731E1BCA62D8EDB9F360 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F91DBB68D854B731CA96D709 /* Build configuration list for PBXNativeTarget "TwinkleWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				284FA7BBA6AD3B024DFAE6D2 /* Debug */,
+				2824524D7B35FE847CFD5A27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8BE0DB78FEB4F5F3D1486F4D /* Project object */;
+}
