@@ -93,4 +93,4 @@ Mac/  iOS/  Watch/     各端入口(Watch 另含 WatchView)
 
 ## 许可证
 
-尚未选择许可证,公开发布前请先补充。
+[MIT](LICENSE) © 2026 HackSmith

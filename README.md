@@ -93,4 +93,4 @@ Mac/  iOS/  Watch/     App entry points (Watch also has WatchView)
 
 ## License
 
-No license has been chosen yet — add one before publishing.
+[MIT](LICENSE) © 2026 HackSmith
