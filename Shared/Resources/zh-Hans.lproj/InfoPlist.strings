@@ -1,0 +1,2 @@
+"NSMicrophoneUsageDescription" = "用于语音输入并实时翻译";
+"NSSpeechRecognitionUsageDescription" = "用于把你的语音识别成文字后翻译";

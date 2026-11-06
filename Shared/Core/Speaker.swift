@@ -43,7 +43,7 @@ final class Speaker {
 
     private func speakSystem(_ text: String, lang: Lang, cfg: TTSConfig) {
         let u = AVSpeechUtterance(string: text)
-        let id = lang == .zh ? cfg.zhVoice : cfg.enVoice
+        let id = cfg.voices[lang.rawValue] ?? ""
         u.voice = (id.isEmpty ? nil : AVSpeechSynthesisVoice(identifier: id)) ?? AVSpeechSynthesisVoice(language: lang.speechLocale)
         u.rate = min(max(AVSpeechUtteranceDefaultSpeechRate * Float(cfg.speed), AVSpeechUtteranceMinimumSpeechRate),
                      AVSpeechUtteranceMaximumSpeechRate)
@@ -52,7 +52,7 @@ final class Speaker {
 
     private nonisolated static func fetchCloudAudio(_ text: String, cfg: TTSConfig, key: String) async throws -> Data {
         let base = cfg.baseURL.trimmingCharacters(in: CharacterSet(charactersIn: "/ "))
-        guard let url = URL(string: base + "/audio/speech") else { throw TranslationError(message: "TTS Base URL 无效") }
+        guard let url = URL(string: base + "/audio/speech") else { throw TranslationError(message: L("TTS Base URL 无效")) }
         var req = URLRequest(url: url)
         req.httpMethod = "POST"
         req.timeoutInterval = 30
@@ -63,7 +63,7 @@ final class Speaker {
         req.httpBody = try JSONSerialization.data(withJSONObject: body)
         let (data, resp) = try await URLSession.shared.data(for: req)
         guard (resp as? HTTPURLResponse)?.statusCode == 200 else {
-            throw TranslationError(message: "云端语音失败")
+            throw TranslationError(message: L("云端语音失败"))
         }
         return data
     }

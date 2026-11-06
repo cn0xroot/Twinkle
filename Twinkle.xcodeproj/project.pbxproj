@@ -9,10 +9,14 @@
 /* Begin PBXBuildFile section */
 		07B7D5AA383ACB807E26B06D /* TwinkleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B80E3CF9459F2C59870B50 /* TwinkleApp.swift */; };
 		08C89D1B706F0268CB4F93E5 /* EntryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEEC5E2BB949D19C73A4DCF /* EntryCard.swift */; };
+		165F85278331A998BAF6A326 /* UILanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79FFB8F1F2D9924D5C037D1 /* UILanguage.swift */; };
 		1EE2598C0476D50CB9BFECDB /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082D1470E843C88EA9DF1D36 /* Models.swift */; };
 		21F9D027B31D04B4426F76C6 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082D1470E843C88EA9DF1D36 /* Models.swift */; };
+		23A8A04015F8CBC7ECDEBE0A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3F3B12B733D597431AFD1302 /* InfoPlist.strings */; };
 		255010B43F473105A1B2DD9F /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC53ACA157E087E1C84E3C9 /* Speaker.swift */; };
 		29E99C9D711E3FFD2CF8E536 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D0650E86D8A9FE15BC3570 /* Theme.swift */; };
+		2A76E7270914264C444F74C1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1C43BE99B465763FDF7995A5 /* Localizable.strings */; };
+		2B311961BEE02DA08F959DE9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3F3B12B733D597431AFD1302 /* InfoPlist.strings */; };
 		300D492EF0BEE1D6FFCDF4DF /* WatchSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894DD3EF98CDA9A24F039066 /* WatchSync.swift */; };
 		3225C8F089EAB2448E1934ED /* TranslatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267E80D0D2DE70CED8C720B /* TranslatorViewModel.swift */; };
 		358F7D581770DDCD4B7394A3 /* TranslationClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4410635EA8006000F4F3946C /* TranslationClient.swift */; };
@@ -20,14 +24,19 @@
 		44B9090321AB01FFA7836A89 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B584EAA5E7EA8F5EF790B4 /* Keychain.swift */; };
 		4DD903DCC25EA490AF79E27F /* TranslatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCEF9CC08F0C1531E62DE9A /* TranslatorView.swift */; };
 		4EB468C2FD9A7A265D24240C /* TTSSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B764D99EE7008D66E81145 /* TTSSettings.swift */; };
+		5112863CBF803115E92EA9D7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3F3B12B733D597431AFD1302 /* InfoPlist.strings */; };
+		543C042877F76FC8EBF1C877 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DA76BFDA4BAE94E61D30A29 /* Assets.xcassets */; };
 		5AC76B6BFA1AC901B034B38E /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082D1470E843C88EA9DF1D36 /* Models.swift */; };
 		601999A9B0B3FED2050DF770 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45403ED9B9E011C7CDEB830C /* SettingsView.swift */; };
 		6B33689B67D1B165DC5E20E4 /* TTSSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B764D99EE7008D66E81145 /* TTSSettings.swift */; };
 		7135A398A3E883C6D2CE7CF0 /* TranslationClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4410635EA8006000F4F3946C /* TranslationClient.swift */; };
 		74DE6CB5172CBF1F9FAFB72C /* EntryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEEC5E2BB949D19C73A4DCF /* EntryCard.swift */; };
 		7589CC495EBBEFEF0F0B258C /* TranslatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267E80D0D2DE70CED8C720B /* TranslatorViewModel.swift */; };
+		764501D5F4F9A54E7981F000 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1C43BE99B465763FDF7995A5 /* Localizable.strings */; };
 		76BC98FE1FD3BADBA3AAEA5C /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D0650E86D8A9FE15BC3570 /* Theme.swift */; };
 		7E46565E0D57EE1FBFF22014 /* SpeechInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3AAFF9CDC4398914678B74 /* SpeechInput.swift */; };
+		8511F4DF4F33786323764018 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1C43BE99B465763FDF7995A5 /* Localizable.strings */; };
+		8A008A0D8EED47574FEAD8B0 /* UILanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79FFB8F1F2D9924D5C037D1 /* UILanguage.swift */; };
 		8AA5BDDAD2F792A3021BF66F /* WatchSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894DD3EF98CDA9A24F039066 /* WatchSync.swift */; };
 		8C29552AB96113677F80EE6B /* Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D130C58DB4A5169F24486A57 /* Demo.swift */; };
 		9209864C9710E497BC153DBF /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC53ACA157E087E1C84E3C9 /* Speaker.swift */; };
@@ -37,8 +46,10 @@
 		9A37140C62047742A6B13E56 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B584EAA5E7EA8F5EF790B4 /* Keychain.swift */; };
 		A3D9B177869085E60760A20F /* Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D130C58DB4A5169F24486A57 /* Demo.swift */; };
 		A4601ED051D149008B835184 /* WatchSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894DD3EF98CDA9A24F039066 /* WatchSync.swift */; };
+		A7EE1613BADEC45A69F32E89 /* UILanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79FFB8F1F2D9924D5C037D1 /* UILanguage.swift */; };
 		A911124E1FD7DA3553356B10 /* SpeechInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3AAFF9CDC4398914678B74 /* SpeechInput.swift */; };
 		AACBF173450EF3680319BEB0 /* TranslatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267E80D0D2DE70CED8C720B /* TranslatorViewModel.swift */; };
+		B4709567B614CAAEAFA2D0E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1022824011AA73391C6851AB /* Assets.xcassets */; };
 		B8C8342A948AB402FED7B984 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819209E80488BDA29FC34301 /* AppSettings.swift */; };
 		BC7D79AE69346F826D2BDA3A /* EntryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEEC5E2BB949D19C73A4DCF /* EntryCard.swift */; };
 		BDC4468C1CACD297E761239F /* TTSSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B764D99EE7008D66E81145 /* TTSSettings.swift */; };
@@ -51,6 +62,7 @@
 		D13BCB7851BA1EEEB58EF654 /* WatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C063715E911F12F6F8F4A0 /* WatchView.swift */; };
 		D2F95C7A4C813501849F5617 /* TranslationClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4410635EA8006000F4F3946C /* TranslationClient.swift */; };
 		E19E751D3D5D6AC35687489B /* TwinkleWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 26253E455299D8B40138ABE6 /* TwinkleWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F7D80306CB75780856495363 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5366BB3C33289709436776E /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,11 +92,14 @@
 /* Begin PBXFileReference section */
 		04F52995580913CC61E29C60 /* TwinkleMacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwinkleMacApp.swift; sourceTree = "<group>"; };
 		082D1470E843C88EA9DF1D36 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		09EB278031D008955EE42B2C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		0F3AAFF9CDC4398914678B74 /* SpeechInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechInput.swift; sourceTree = "<group>"; };
+		1022824011AA73391C6851AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10B584EAA5E7EA8F5EF790B4 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		1267E80D0D2DE70CED8C720B /* TranslatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatorViewModel.swift; sourceTree = "<group>"; };
 		13C063715E911F12F6F8F4A0 /* WatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchView.swift; sourceTree = "<group>"; };
 		26253E455299D8B40138ABE6 /* TwinkleWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwinkleWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DA76BFDA4BAE94E61D30A29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2FC53ACA157E087E1C84E3C9 /* Speaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speaker.swift; sourceTree = "<group>"; };
 		2FFD50F0D89023B831FE28A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		32EE3E26F61FBEB64BB93A69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -93,15 +108,20 @@
 		4410635EA8006000F4F3946C /* TranslationClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationClient.swift; sourceTree = "<group>"; };
 		45403ED9B9E011C7CDEB830C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		53B80E3CF9459F2C59870B50 /* TwinkleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwinkleApp.swift; sourceTree = "<group>"; };
+		5CD6770B0DA6DF0DAF1A1EF6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		5CEEC5E2BB949D19C73A4DCF /* EntryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryCard.swift; sourceTree = "<group>"; };
 		793C709A27504081AEB7ED76 /* TwinkleWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwinkleWatchApp.swift; sourceTree = "<group>"; };
 		819209E80488BDA29FC34301 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		894DD3EF98CDA9A24F039066 /* WatchSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSync.swift; sourceTree = "<group>"; };
+		8C52E94E8D4A5201589F4B9C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8DCEF9CC08F0C1531E62DE9A /* TranslatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatorView.swift; sourceTree = "<group>"; };
 		A5D0650E86D8A9FE15BC3570 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		A79FFB8F1F2D9924D5C037D1 /* UILanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILanguage.swift; sourceTree = "<group>"; };
 		A9E47DEE5E3DCF520A52086E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		BA09042E0440E547B00C889A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D130C58DB4A5169F24486A57 /* Demo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo.swift; sourceTree = "<group>"; };
 		D20F25FAE878DCCDA6F2C391 /* TwinkleMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwinkleMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5366BB3C33289709436776E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -118,6 +138,7 @@
 				4410635EA8006000F4F3946C /* TranslationClient.swift */,
 				1267E80D0D2DE70CED8C720B /* TranslatorViewModel.swift */,
 				43B764D99EE7008D66E81145 /* TTSSettings.swift */,
+				A79FFB8F1F2D9924D5C037D1 /* UILanguage.swift */,
 				894DD3EF98CDA9A24F039066 /* WatchSync.swift */,
 			);
 			path = Core;
@@ -135,6 +156,7 @@
 		66F868F59E99FBB3CC9A3922 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				1022824011AA73391C6851AB /* Assets.xcassets */,
 				2FFD50F0D89023B831FE28A7 /* Info.plist */,
 				53B80E3CF9459F2C59870B50 /* TwinkleApp.swift */,
 			);
@@ -144,6 +166,7 @@
 		6ABFBC0707DBE6656E3FA777 /* Watch */ = {
 			isa = PBXGroup;
 			children = (
+				E5366BB3C33289709436776E /* Assets.xcassets */,
 				A9E47DEE5E3DCF520A52086E /* Info.plist */,
 				793C709A27504081AEB7ED76 /* TwinkleWatchApp.swift */,
 				13C063715E911F12F6F8F4A0 /* WatchView.swift */,
@@ -162,6 +185,7 @@
 		8A8D6A748FC8F758E311D723 /* Mac */ = {
 			isa = PBXGroup;
 			children = (
+				2DA76BFDA4BAE94E61D30A29 /* Assets.xcassets */,
 				32EE3E26F61FBEB64BB93A69 /* Info.plist */,
 				04F52995580913CC61E29C60 /* TwinkleMacApp.swift */,
 			);
@@ -182,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				032D7612E959398F1FB7F437 /* Core */,
+				F797DEC8F8E43BA997ABD6E7 /* Resources */,
 				78A842BE44A8DD5EC63DE473 /* Speech */,
 				1EB7543C544979F70E883575 /* UI */,
 			);
@@ -199,6 +224,15 @@
 			);
 			sourceTree = "<group>";
 		};
+		F797DEC8F8E43BA997ABD6E7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3F3B12B733D597431AFD1302 /* InfoPlist.strings */,
+				1C43BE99B465763FDF7995A5 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -207,6 +241,7 @@
 			buildConfigurationList = F91DBB68D854B731CA96D709 /* Build configuration list for PBXNativeTarget "TwinkleWatch" */;
 			buildPhases = (
 				0E39DBD403567BC2B201F9FC /* Sources */,
+				EACA6D6AAB14C1D59A1C100B /* Resources */,
 			);
 			buildRules = (
 			);
@@ -224,6 +259,7 @@
 			buildConfigurationList = 6010747A441DFC6CE715D973 /* Build configuration list for PBXNativeTarget "TwinkleMac" */;
 			buildPhases = (
 				92F8801D9C2E2D81B4890AA6 /* Sources */,
+				BD2397122D0457BD0D65470E /* Resources */,
 			);
 			buildRules = (
 			);
@@ -241,6 +277,7 @@
 			buildConfigurationList = 0C4BC611758485DAD2289D8E /* Build configuration list for PBXNativeTarget "TwinkleiOS" */;
 			buildPhases = (
 				EC7D1CBA5F8220832CDD77E8 /* Sources */,
+				030F5ADEB3AF3F44E357EFF6 /* Resources */,
 				420E748ED28EB9715A3DB398 /* Embed Watch Content */,
 			);
 			buildRules = (
@@ -267,11 +304,12 @@
 				};
 			};
 			buildConfigurationList = 3EE865761FD87E143FF4D4DB /* Build configuration list for PBXProject "Twinkle" */;
-			developmentRegion = en;
+			developmentRegion = "zh-Hans";
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				Base,
 				en,
+				"zh-Hans",
 			);
 			mainGroup = E70772580B8268BA7B0BCB36;
 			minimizedProjectReferenceProxies = 1;
@@ -286,6 +324,39 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		030F5ADEB3AF3F44E357EFF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4709567B614CAAEAFA2D0E1 /* Assets.xcassets in Resources */,
+				5112863CBF803115E92EA9D7 /* InfoPlist.strings in Resources */,
+				8511F4DF4F33786323764018 /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD2397122D0457BD0D65470E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				543C042877F76FC8EBF1C877 /* Assets.xcassets in Resources */,
+				23A8A04015F8CBC7ECDEBE0A /* InfoPlist.strings in Resources */,
+				764501D5F4F9A54E7981F000 /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EACA6D6AAB14C1D59A1C100B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7D80306CB75780856495363 /* Assets.xcassets in Resources */,
+				2B311961BEE02DA08F959DE9 /* InfoPlist.strings in Resources */,
+				2A76E7270914264C444F74C1 /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0E39DBD403567BC2B201F9FC /* Sources */ = {
@@ -303,6 +374,7 @@
 				D2F95C7A4C813501849F5617 /* TranslationClient.swift in Sources */,
 				3225C8F089EAB2448E1934ED /* TranslatorViewModel.swift in Sources */,
 				959EB8CAA5A13E864DA25282 /* TwinkleWatchApp.swift in Sources */,
+				8A008A0D8EED47574FEAD8B0 /* UILanguage.swift in Sources */,
 				300D492EF0BEE1D6FFCDF4DF /* WatchSync.swift in Sources */,
 				D13BCB7851BA1EEEB58EF654 /* WatchView.swift in Sources */,
 			);
@@ -326,6 +398,7 @@
 				4DD903DCC25EA490AF79E27F /* TranslatorView.swift in Sources */,
 				7589CC495EBBEFEF0F0B258C /* TranslatorViewModel.swift in Sources */,
 				4482D13347AB1577CC855B09 /* TwinkleMacApp.swift in Sources */,
+				A7EE1613BADEC45A69F32E89 /* UILanguage.swift in Sources */,
 				A4601ED051D149008B835184 /* WatchSync.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,6 +421,7 @@
 				C15A8ECFB4A371748D239EE0 /* TranslatorView.swift in Sources */,
 				AACBF173450EF3680319BEB0 /* TranslatorViewModel.swift in Sources */,
 				07B7D5AA383ACB807E26B06D /* TwinkleApp.swift in Sources */,
+				165F85278331A998BAF6A326 /* UILanguage.swift in Sources */,
 				8AA5BDDAD2F792A3021BF66F /* WatchSync.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,6 +435,27 @@
 			targetProxy = 29D7C663A88111A0E801DF49 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1C43BE99B465763FDF7995A5 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA09042E0440E547B00C889A /* en */,
+				5CD6770B0DA6DF0DAF1A1EF6 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		3F3B12B733D597431AFD1302 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C52E94E8D4A5201589F4B9C /* en */,
+				09EB278031D008955EE42B2C /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2824524D7B35FE847CFD5A27 /* Release */ = {

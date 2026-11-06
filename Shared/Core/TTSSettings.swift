@@ -4,13 +4,12 @@ import AVFoundation
 enum TTSEngine: String, Codable, CaseIterable, Identifiable {
     case system, openai
     var id: String { rawValue }
-    var title: String { self == .system ? "系统语音(离线)" : "OpenAI 云端语音" }
+    var title: String { self == .system ? L("系统语音(离线)") : L("OpenAI 云端语音") }
 }
 
 struct TTSConfig: Codable, Equatable {
     var engine: TTSEngine = .system
-    var zhVoice = ""            // AVSpeechSynthesisVoice.identifier,空 = 系统默认
-    var enVoice = ""
+    var voices: [String: String] = [:]   // 语言代码 → AVSpeechSynthesisVoice.identifier,缺省 = 系统默认
     var speed: Double = 1.0     // 0.5x ~ 1.5x
     var baseURL = "https://api.openai.com/v1"
     var model = "gpt-4o-mini-tts"
@@ -67,15 +66,15 @@ final class TTSSettings: ObservableObject {
 enum SystemVoices {
     static func list(for lang: Lang) -> [AVSpeechSynthesisVoice] {
         AVSpeechSynthesisVoice.speechVoices()
-            .filter { $0.language.hasPrefix(lang == .zh ? "zh" : "en") }
+            .filter { $0.language.hasPrefix(lang.code) }
             .sorted { ($0.quality.rawValue, $1.name) > ($1.quality.rawValue, $0.name) }
     }
 
     static func label(_ v: AVSpeechSynthesisVoice) -> String {
         let q: String
         switch v.quality {
-        case .premium: q = " · 高级"
-        case .enhanced: q = " · 增强"
+        case .premium: q = L(" · 高级")
+        case .enhanced: q = L(" · 增强")
         default: q = ""
         }
         return "\(v.name) (\(v.language))\(q)"

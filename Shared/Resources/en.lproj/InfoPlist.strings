@@ -1,0 +1,2 @@
+"NSMicrophoneUsageDescription" = "Used for voice input and live translation.";
+"NSSpeechRecognitionUsageDescription" = "Used to convert your speech to text for translation.";

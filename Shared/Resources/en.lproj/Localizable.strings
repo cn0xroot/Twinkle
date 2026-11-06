@@ -1,0 +1,59 @@
+/* Main */
+"自动朗读译文" = "Auto-read translations";
+"自动检测" = "Auto-detect";
+"说点什么吧" = "Say something";
+"输入文字,或点击下方麦克风实时互译" = "Type, or tap the microphone below for live translation";
+"实时字幕" = "Live captions";
+"持续聆听,按停顿自动分句,逐句显示原文与译文" = "Listen continuously, split sentences at pauses, and show the original and translation sentence by sentence";
+"字幕中" = "Captioning";
+"正在聆听" = "Listening";
+"输入%@…" = "Type %@…";
+"输入要翻译的文字…" = "Type text to translate…";
+"朗读" = "Read aloud";
+
+/* Settings */
+"设置" = "Settings";
+"完成" = "Done";
+"通用" = "General";
+"界面语言" = "Interface language";
+"大模型" = "LLM";
+"接口类型" = "Provider";
+"OpenAI 兼容" = "OpenAI-compatible";
+"模型" = "Model";
+"朗读方案" = "Engine";
+"系统语音(离线)" = "System voice (offline)";
+"OpenAI 云端语音" = "OpenAI cloud voice";
+"%@ 声音" = "%@ voice";
+"系统默认" = "System default";
+" · 高级" = " · Premium";
+" · 增强" = " · Enhanced";
+"云端语音(OpenAI 兼容 TTS)" = "Cloud voice (OpenAI-compatible TTS)";
+"留空则沿用上方 Key" = "Leave empty to reuse the key above";
+"音色" = "Voice";
+"未配置 Key,将退回系统语音" = "No key set; falling back to the system voice";
+"语速 %@x" = "Speed %@x";
+"试听" = "Preview";
+"API Key 保存在系统钥匙串中。iPhone 上的配置会自动同步到 Apple Watch。" = "API keys are stored in the system Keychain. Settings on iPhone sync to Apple Watch automatically.";
+"可手动输入模型名" = "You can type a model name manually";
+
+/* Errors */
+"无效的响应" = "Invalid response";
+"请先在设置中填写 API Key" = "Please enter your API key in Settings first";
+"请先填写 API Key" = "Please enter your API key first";
+"Base URL 无效" = "Invalid Base URL";
+"TTS Base URL 无效" = "Invalid TTS Base URL";
+"云端语音失败" = "Cloud voice failed";
+"API Key 无效 (401)" = "Invalid API key (401)";
+"获取模型失败 (HTTP %d)" = "Failed to fetch models (HTTP %d)";
+"无法解析模型列表" = "Unable to parse the model list";
+"未授权语音识别,请在系统设置中开启" = "Speech recognition is not authorized. Enable it in System Settings";
+"当前语言的语音识别不可用" = "Speech recognition is unavailable for this language";
+"未检测到可用的麦克风" = "No usable microphone found";
+"语音识别中断,请重试" = "Speech recognition was interrupted. Please try again";
+
+/* Watch */
+"源语言" = "From";
+"目标语言" = "To";
+"自动" = "Auto";
+"说话或输入" = "Speak or type";
+"请先在 iPhone 上的 Twinkle 中配置 API Key" = "Set up your API key in Twinkle on iPhone first";

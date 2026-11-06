@@ -3,15 +3,20 @@ import SwiftUI
 struct WatchView: View {
     @StateObject private var vm = TranslatorViewModel()
     @ObservedObject private var settings = AppSettings.shared
+    @ObservedObject private var ui = UISettings.shared
 
     var body: some View {
         NavigationStack {
             List {
-                Picker("方向", selection: $vm.direction) {
-                    ForEach(Direction.allCases) { Text($0.title).tag($0) }
+                Picker("源语言", selection: Binding(get: { vm.source }, set: { vm.setSource($0) })) {
+                    Text("自动").tag(Lang?.none)
+                    ForEach(Lang.allCases) { Text($0.label).tag(Lang?.some($0)) }
+                }
+                Picker("目标语言", selection: Binding(get: { vm.target }, set: { vm.setTarget($0) })) {
+                    ForEach(Lang.allCases) { Text($0.label).tag($0) }
                 }
                 // 点击输入框即可使用系统听写(中/英)、手写或键盘
-                TextField(vm.direction == .enToZh ? "Speak or type" : "说话或输入", text: $vm.input)
+                TextField("说话或输入", text: $vm.input)
                     .submitLabel(.send)
                     .onSubmit { vm.submit() }
 
@@ -31,5 +36,6 @@ struct WatchView: View {
             }
             .navigationTitle("Twinkle")
         }
+        .environment(\.locale, ui.locale)
     }
 }

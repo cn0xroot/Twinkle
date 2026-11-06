@@ -3,6 +3,7 @@ import SwiftUI
 struct SettingsView: View {
     @ObservedObject private var settings = AppSettings.shared
     @ObservedObject private var tts = TTSSettings.shared
+    @ObservedObject private var ui = UISettings.shared
     @Environment(\.dismiss) private var dismiss
     @State private var models: [String] = []
     @State private var loading = false
@@ -17,6 +18,13 @@ struct SettingsView: View {
     var body: some View {
         NavigationStack {
             Form {
+                Section {
+                    Picker("界面语言", selection: $ui.lang) {
+                        ForEach(UILang.allCases) { Text($0.title).tag($0) }
+                    }
+                } header: {
+                    Label("通用", systemImage: "globe")
+                }
                 Section {
                     Picker("接口类型", selection: Binding(
                         get: { settings.config.provider },
@@ -47,8 +55,9 @@ struct SettingsView: View {
             .navigationTitle("设置")
             .toolbar { ToolbarItem(placement: .confirmationAction) { Button("完成") { dismiss() } } }
         }
+        .environment(\.locale, ui.locale)
         #if os(macOS)
-        .frame(width: 540, height: 700)
+        .frame(width: 540, height: 780)
         #endif
     }
 
@@ -57,8 +66,11 @@ struct SettingsView: View {
             ForEach(TTSEngine.allCases) { Text($0.title).tag($0) }
         }
         if tts.config.engine == .system {
-            voicePicker("中文声音", lang: .zh, selection: $tts.config.zhVoice)
-            voicePicker("英文声音", lang: .en, selection: $tts.config.enVoice)
+            ForEach(Lang.allCases) { l in
+                voicePicker(L("%@ 声音", l.label), lang: l, selection: Binding(
+                    get: { tts.config.voices[l.rawValue] ?? "" },
+                    set: { tts.config.voices[l.rawValue] = $0.isEmpty ? nil : $0 }))
+            }
         }
         // 云端语音配置始终可见,方便先填好 Key 再切换方案
         Text("云端语音(OpenAI 兼容 TTS)").font(.footnote.weight(.semibold)).foregroundStyle(.secondary)
@@ -74,12 +86,25 @@ struct SettingsView: View {
             Text("未配置 Key,将退回系统语音").font(.footnote).foregroundStyle(.orange)
         }
         HStack {
-            Text("语速 \(String(format: "%.1f", tts.config.speed))x")
+            Text(L("语速 %@x", String(format: "%.1f", tts.config.speed)))
             Slider(value: $tts.config.speed, in: 0.5...1.5, step: 0.1)
         }
         HStack {
-            Button("试听中文") { Speaker.shared.speak("你好,很高兴认识你。", lang: .zh) }
-            Button("Listen English") { Speaker.shared.speak("Hello, nice to meet you.", lang: .en) }
+            Menu("试听") {
+                ForEach(Lang.allCases) { l in
+                    Button(l.label) { Speaker.shared.speak(Self.sample(l), lang: l) }
+                }
+            }
+        }
+    }
+
+    private static func sample(_ l: Lang) -> String {
+        switch l {
+        case .zh: return "你好,很高兴认识你。"
+        case .en: return "Hello, nice to meet you."
+        case .ja: return "こんにちは、はじめまして。"
+        case .ko: return "안녕하세요, 만나서 반갑습니다."
+        case .fr: return "Bonjour, ravi de vous rencontrer."
         }
     }
 
@@ -132,7 +157,7 @@ struct SettingsView: View {
         } catch {
             if Task.isCancelled || error is CancellationError { return }
             models = []
-            modelError = error.localizedDescription + ",可手动输入模型名"
+            modelError = error.localizedDescription + " · " + L("可手动输入模型名")
         }
     }
 }

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="512" height="512" role="img" aria-label="Twinkle logo">
+  <defs>
+    <linearGradient id="bg" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1024" y2="1024">
+      <stop offset="0" stop-color="#4F46E5"/><stop offset="0.55" stop-color="#9B51E0"/><stop offset="1" stop-color="#FF5E8A"/>
+    </linearGradient>
+    <linearGradient id="star" gradientUnits="userSpaceOnUse" x1="330" y1="300" x2="700" y2="660">
+      <stop offset="0" stop-color="#4F46E5"/><stop offset="0.55" stop-color="#9B51E0"/><stop offset="1" stop-color="#FF5E8A"/>
+    </linearGradient>
+    <radialGradient id="glow" gradientUnits="userSpaceOnUse" cx="256" cy="154" r="717">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.28"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="14" stdDeviation="15" flood-color="#2A1B7A" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="1024" height="1024" rx="224" fill="url(#bg)"/>
+  <rect width="1024" height="1024" rx="224" fill="url(#glow)"/>
+  <g filter="url(#shadow)" fill="#fff">
+    <rect x="232" y="262" width="560" height="440" rx="150"/>
+    <path d="M330 620 L268 802 Q280 818 304 800 L492 690 L492 620 Z"/>
+  </g>
+  <g fill="#fff">
+    <rect x="232" y="262" width="560" height="440" rx="150"/>
+    <path d="M330 620 L268 802 Q280 818 304 800 L492 690 L492 620 Z"/>
+  </g>
+  <path fill="url(#star)" d="M512 304 Q540.5 453.5 690 482 Q540.5 510.5 512 660 Q483.5 510.5 334 482 Q483.5 453.5 512 304 Z"/>
+  <path fill="#fff" d="M792 164 Q803.8 226.2 866 238 Q803.8 249.8 792 312 Q780.2 249.8 718 238 Q780.2 226.2 792 164 Z"/>
+  <path fill="#fff" d="M872 324 Q877.8 354.2 908 360 Q877.8 365.8 872 396 Q866.2 365.8 836 360 Q866.2 354.2 872 324 Z"/>
+</svg>

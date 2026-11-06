@@ -23,7 +23,3 @@ enum Clipboard {
         #endif
     }
 }
-
-extension Lang {
-    var label: String { self == .zh ? "中文" : "English" }
-}

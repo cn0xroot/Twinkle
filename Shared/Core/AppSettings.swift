@@ -4,7 +4,7 @@ import SwiftUI
 enum Provider: String, Codable, CaseIterable, Identifiable {
     case anthropic, openai
     var id: String { rawValue }
-    var title: String { self == .anthropic ? "Anthropic (Claude)" : "OpenAI 兼容" }
+    var title: String { self == .anthropic ? "Anthropic (Claude)" : L("OpenAI 兼容") }
     var defaultBaseURL: String { self == .anthropic ? "https://api.anthropic.com" : "https://api.openai.com/v1" }
     var defaultModel: String { self == .anthropic ? "claude-haiku-5-5" : "gpt-4o-mini" }
 }

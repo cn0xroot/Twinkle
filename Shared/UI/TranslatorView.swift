@@ -4,8 +4,8 @@ struct TranslatorView: View {
     @StateObject private var vm = TranslatorViewModel()
     @StateObject private var speech = SpeechInput()
     @State private var showSettings = false
+    @ObservedObject private var ui = UISettings.shared
     @State private var pulse = false
-    @Namespace private var dirNS
 
     var body: some View {
         ZStack {
@@ -14,7 +14,7 @@ struct TranslatorView: View {
 
             VStack(spacing: 0) {
                 header
-                directionPicker.padding(.horizontal, 16).padding(.bottom, 8)
+                languageBar.padding(.horizontal, 16).padding(.bottom, 8)
                 content
                 if let e = vm.error ?? speech.error {
                     Label(e, systemImage: "exclamationmark.triangle.fill")
@@ -25,10 +25,11 @@ struct TranslatorView: View {
             }
         }
         .sheet(isPresented: $showSettings) { SettingsView() }
+        .environment(\.locale, ui.locale)
         .sensoryFeedback(.impact, trigger: speech.isRecording)
         .onAppear {
             speech.onPartial = { vm.voicePartial($0) }
-            speech.onFinal = { vm.voiceFinal($0) }
+            speech.onFinal = { vm.voiceSegment($0) }
             if !Demo.enabled, !AppSettings.shared.config.isReady { showSettings = true }
         }
         #if os(macOS)
@@ -68,26 +69,52 @@ struct TranslatorView: View {
         .buttonStyle(.plain)
     }
 
-    // MARK: Direction
-    private var directionPicker: some View {
-        HStack(spacing: 4) {
-            ForEach(Direction.allCases) { d in
-                Text(d.title)
-                    .font(.system(.subheadline, design: .rounded).weight(.semibold))
-                    .frame(maxWidth: .infinity).padding(.vertical, 8)
-                    .foregroundStyle(vm.direction == d ? AnyShapeStyle(.white) : AnyShapeStyle(.secondary))
-                    .background {
-                        if vm.direction == d {
-                            Capsule().fill(Theme.gradient).matchedGeometryEffect(id: "dir", in: dirNS)
-                        }
-                    }
-                    .contentShape(Capsule())
-                    .onTapGesture { withAnimation(.snappy) { vm.direction = d } }
+    // MARK: Languages
+    private var languageBar: some View {
+        HStack(spacing: 8) {
+            langMenu(vm.source?.label ?? L("自动检测"), icon: vm.source == nil ? "wand.and.stars" : "globe") {
+                Button { vm.setSource(nil) } label: { check(L("自动检测"), vm.source == nil) }
+                Divider()
+                ForEach(Lang.allCases) { l in
+                    Button { vm.setSource(l) } label: { check(l.label, vm.source == l) }
+                }
+            }
+            Button { withAnimation(.snappy) { vm.swapLanguages() } } label: {
+                Image(systemName: "arrow.left.arrow.right")
+                    .font(.system(size: 13, weight: .bold)).foregroundStyle(.white)
+                    .frame(width: 36, height: 36)
+                    .background(Theme.gradient, in: Circle())
+            }
+            .buttonStyle(.plain)
+            langMenu(vm.target.label, icon: "character.bubble") {
+                ForEach(Lang.allCases) { l in
+                    Button { vm.setTarget(l) } label: { check(l.label, vm.target == l) }
+                }
             }
         }
-        .padding(4)
-        .background(.regularMaterial, in: Capsule())
-        .overlay(Capsule().strokeBorder(.primary.opacity(0.06)))
+    }
+
+    @ViewBuilder private func check(_ title: String, _ on: Bool) -> some View {
+        if on { Label(title, systemImage: "checkmark") } else { Text(title) }
+    }
+
+    private func langMenu<C: View>(_ title: String, icon: String, @ViewBuilder content: () -> C) -> some View {
+        Menu { content() } label: {
+            HStack(spacing: 6) {
+                Image(systemName: icon).foregroundStyle(Theme.gradient)
+                Text(title).font(.system(.subheadline, design: .rounded).weight(.semibold))
+                Spacer(minLength: 0)
+                Image(systemName: "chevron.up.chevron.down").font(.caption2).foregroundStyle(.secondary)
+            }
+            .padding(.horizontal, 14).padding(.vertical, 10)
+            .frame(maxWidth: .infinity)
+            .background(.regularMaterial, in: Capsule())
+            .overlay(Capsule().strokeBorder(.primary.opacity(0.06)))
+            .contentShape(Capsule())
+        }
+        .menuStyle(.button)
+        .buttonStyle(.plain)
+        .menuIndicator(.hidden)
     }
 
     // MARK: Content
@@ -100,7 +127,7 @@ struct TranslatorView: View {
                         .transition(.move(edge: .top).combined(with: .opacity))
                 }
                 ForEach(vm.history) {
-                    EntryCard(source: $0.source, target: $0.target, from: $0.from, to: $0.to)
+                    EntryCard(source: $0.source, target: $0.target, from: $0.from, to: $0.to, pending: $0.pending)
                         .transition(.move(edge: .top).combined(with: .opacity))
                 }
                 if vm.history.isEmpty && vm.liveSource.isEmpty { emptyState }
@@ -108,12 +135,11 @@ struct TranslatorView: View {
             .padding(.horizontal, 16).padding(.vertical, 8)
             .animation(.snappy, value: vm.history.count)
         }
+        .defaultScrollAnchor(.top)
     }
 
     private var emptyState: some View {
-        let samples = vm.direction == .enToZh
-            ? ["Where is the nearest subway station?", "Could you recommend a good restaurant?", "I'd like to book a table for two."]
-            : ["今天天气真好,我们出去走走吧。", "请问最近的地铁站怎么走?", "我想预订一张两人的桌子。"]
+        let samples = Self.samples(vm.source ?? vm.voiceSource)
         return VStack(spacing: 18) {
             ZStack {
                 Circle().fill(Theme.gradient).frame(width: 84, height: 84).opacity(0.15)
@@ -121,7 +147,7 @@ struct TranslatorView: View {
             }
             VStack(spacing: 4) {
                 Text("说点什么吧").font(.system(.title3, design: .rounded).weight(.bold))
-                Text("输入文字,或按住下方麦克风实时互译").font(.subheadline).foregroundStyle(.secondary)
+                Text("输入文字,或点击下方麦克风实时互译").font(.subheadline).foregroundStyle(.secondary)
             }
             VStack(spacing: 8) {
                 ForEach(samples, id: \.self) { s in
@@ -142,18 +168,10 @@ struct TranslatorView: View {
     // MARK: Input
     private var inputBar: some View {
         VStack(spacing: 8) {
-            if speech.isRecording {
-                HStack(spacing: 6) {
-                    Circle().fill(.red).frame(width: 8, height: 8).opacity(pulse ? 1 : 0.3)
-                    Text("正在聆听 · \(vm.direction.voiceSource.label)")
-                        .font(.system(.footnote, design: .rounded).weight(.semibold))
-                        .foregroundStyle(.secondary)
-                }
-                .transition(.opacity)
-            }
+            statusRow
             HStack(spacing: 10) {
                 HStack(alignment: .bottom, spacing: 6) {
-                    TextField(vm.direction == .enToZh ? "Type English…" : "输入中文…", text: $vm.input, axis: .vertical)
+                    TextField(vm.inputPlaceholder, text: $vm.input, axis: .vertical)
                         .textFieldStyle(.plain)
                         .font(.system(.body, design: .rounded))
                         .lineLimit(1...5)
@@ -176,8 +194,39 @@ struct TranslatorView: View {
         .animation(.snappy, value: speech.isRecording)
     }
 
+    /// 实时字幕开关 + 录音状态
+    private var statusRow: some View {
+        let on = vm.captionMode
+        let fg: AnyShapeStyle = on ? AnyShapeStyle(.white) : AnyShapeStyle(.primary)
+        let bg: AnyShapeStyle = on ? AnyShapeStyle(Theme.gradient) : AnyShapeStyle(.regularMaterial)
+        return HStack(spacing: 10) {
+            Button { vm.captionMode.toggle() } label: {
+                Label("实时字幕", systemImage: on ? "captions.bubble.fill" : "captions.bubble")
+                    .font(.system(.caption, design: .rounded).weight(.semibold))
+                    .foregroundStyle(fg)
+                    .padding(.horizontal, 12).padding(.vertical, 7)
+                    .background(bg, in: Capsule())
+                    .overlay(Capsule().strokeBorder(.primary.opacity(0.06)))
+            }
+            .buttonStyle(.plain)
+            .disabled(speech.isRecording)
+            .help("持续聆听,按停顿自动分句,逐句显示原文与译文")
+            Spacer()
+            if speech.isRecording {
+                HStack(spacing: 6) {
+                    Circle().fill(.red).frame(width: 8, height: 8).opacity(pulse ? 1 : 0.3)
+                    Text(L(vm.captionMode ? "字幕中" : "正在聆听") + " · " + vm.voiceSource.label)
+                        .font(.system(.footnote, design: .rounded).weight(.semibold))
+                        .foregroundStyle(.secondary)
+                }
+                .transition(.opacity)
+            }
+        }
+        .padding(.horizontal, 4)
+    }
+
     private var micButton: some View {
-        Button { speech.toggle(lang: vm.direction.voiceSource) } label: {
+        Button { speech.toggle(lang: vm.voiceSource, continuous: vm.captionMode) } label: {
             ZStack {
                 if speech.isRecording {
                     Circle().stroke(Color.red.opacity(0.4), lineWidth: 2)
@@ -194,9 +243,20 @@ struct TranslatorView: View {
             .frame(width: 60, height: 60)
         }
         .buttonStyle(.plain)
+        .disabled(speech.isStarting)
         .onChange(of: speech.isRecording) { _, rec in
             pulse = false
             if rec { withAnimation(.easeOut(duration: 1.1).repeatForever(autoreverses: false)) { pulse = true } }
+        }
+    }
+
+    private static func samples(_ l: Lang) -> [String] {
+        switch l {
+        case .zh: return ["今天天气真好,我们出去走走吧。", "请问最近的地铁站怎么走?", "我想预订一张两人的桌子。"]
+        case .en: return ["Where is the nearest subway station?", "Could you recommend a good restaurant?", "I'd like to book a table for two."]
+        case .ja: return ["最寄りの駅はどこですか?", "おすすめのレストランを教えてください。", "二名で予約したいです。"]
+        case .ko: return ["가장 가까운 지하철역이 어디예요?", "맛집 하나 추천해 주시겠어요?", "두 명 자리를 예약하고 싶어요."]
+        case .fr: return ["Où est la station de métro la plus proche ?", "Pouvez-vous me recommander un bon restaurant ?", "Je voudrais réserver une table pour deux."]
         }
     }
 }
