@@ -14,6 +14,8 @@ final class TranslatorViewModel: ObservableObject {
     @Published var liveLangs: (from: Lang, to: Lang) = (.zh, .en)
 
     private var task: Task<Void, Never>?
+
+    init() { if Demo.enabled { history = Demo.history } }
     private var debounce: Task<Void, Never>?
 
     /// 文本翻译:提交后进入历史

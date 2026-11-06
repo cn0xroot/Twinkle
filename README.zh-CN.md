@@ -4,6 +4,16 @@
 
 基于 AI 大模型的中英互译 App,支持 **Mac、iPhone 和 Apple Watch**。结果以双语对照呈现(原文在上、译文在下),手机端支持实时语音互译。
 
+## 界面截图
+
+<p align="center">
+  <img src="docs/screenshots/mac-main.png" width="360" alt="主界面:双语对照翻译卡片" />
+  &nbsp;&nbsp;
+  <img src="docs/screenshots/mac-settings.png" width="360" alt="设置:大模型、模型下拉与朗读方案" />
+</p>
+
+<p align="center"><sub>左:双语对照翻译。右:设置页(大模型、模型下拉、朗读方案)。iPhone 版与 Mac 共用同一套 SwiftUI 界面。</sub></p>
+
 ## 功能
 
 - **双语对照**:原文与译文同卡片展示,译文流式逐字输出。

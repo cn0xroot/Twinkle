@@ -62,7 +62,7 @@ struct SettingsView: View {
         }
         // 云端语音配置始终可见,方便先填好 Key 再切换方案
         Text("云端语音(OpenAI 兼容 TTS)").font(.footnote.weight(.semibold)).foregroundStyle(.secondary)
-        SecureField("TTS API Key(留空沿用上方 OpenAI 兼容 Key)", text: $tts.config.apiKey)
+        SecureField("TTS API Key", text: $tts.config.apiKey, prompt: Text("留空则沿用上方 Key"))
         TextField("TTS Base URL", text: $tts.config.baseURL).autocorrectionDisabled()
         Picker("模型", selection: $tts.config.model) {
             ForEach(TTSConfig.cloudModels, id: \.self) { Text($0).tag($0) }
@@ -117,6 +117,7 @@ struct SettingsView: View {
     }
 
     private func loadModels(debounce: Bool = true) async {
+        if Demo.enabled { models = Demo.models; return }
         guard settings.config.isReady else { models = []; modelError = nil; return }
         if debounce { try? await Task.sleep(nanoseconds: 600_000_000) }   // 等输入停下
         if Task.isCancelled { return }

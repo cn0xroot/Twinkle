@@ -32,6 +32,7 @@ final class TTSSettings: ObservableObject {
     }
 
     private init() {
+        if Demo.enabled { config = TTSConfig(); return }
         var c = TTSConfig()
         if let d = UserDefaults.standard.data(forKey: defaultsKey),
            let saved = try? JSONDecoder().decode(TTSConfig.self, from: d) { c = saved }
@@ -54,6 +55,7 @@ final class TTSSettings: ObservableObject {
     }
 
     private func persist() {
+        guard !Demo.enabled else { return }
         var c = config
         Keychain.set(c.apiKey, for: "tts")
         c.apiKey = ""

@@ -30,6 +30,7 @@ final class AppSettings: ObservableObject {
     }
 
     private init() {
+        if Demo.enabled { config = LLMConfig(apiKey: "sk-demo-not-a-real-key"); return }
         var c = LLMConfig()
         if let d = UserDefaults.standard.data(forKey: defaultsKey),
            let saved = try? JSONDecoder().decode(LLMConfig.self, from: d) { c = saved }
@@ -46,6 +47,7 @@ final class AppSettings: ObservableObject {
     }
 
     private func persist() {
+        guard !Demo.enabled else { return }
         var c = config
         Keychain.set(c.apiKey, for: "default")
         c.apiKey = ""

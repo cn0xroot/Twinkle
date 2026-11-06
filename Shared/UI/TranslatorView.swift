@@ -29,7 +29,7 @@ struct TranslatorView: View {
         .onAppear {
             speech.onPartial = { vm.voicePartial($0) }
             speech.onFinal = { vm.voiceFinal($0) }
-            if !AppSettings.shared.config.isReady { showSettings = true }
+            if !Demo.enabled, !AppSettings.shared.config.isReady { showSettings = true }
         }
         #if os(macOS)
         .frame(minWidth: 460, minHeight: 600)

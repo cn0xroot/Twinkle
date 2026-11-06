@@ -29,10 +29,13 @@
 		76BC98FE1FD3BADBA3AAEA5C /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D0650E86D8A9FE15BC3570 /* Theme.swift */; };
 		7E46565E0D57EE1FBFF22014 /* SpeechInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3AAFF9CDC4398914678B74 /* SpeechInput.swift */; };
 		8AA5BDDAD2F792A3021BF66F /* WatchSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894DD3EF98CDA9A24F039066 /* WatchSync.swift */; };
+		8C29552AB96113677F80EE6B /* Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D130C58DB4A5169F24486A57 /* Demo.swift */; };
 		9209864C9710E497BC153DBF /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC53ACA157E087E1C84E3C9 /* Speaker.swift */; };
 		959EB8CAA5A13E864DA25282 /* TwinkleWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793C709A27504081AEB7ED76 /* TwinkleWatchApp.swift */; };
+		97D251400FD0E923217DB8B5 /* Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D130C58DB4A5169F24486A57 /* Demo.swift */; };
 		99DEFABC51C559BAD968B6D6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45403ED9B9E011C7CDEB830C /* SettingsView.swift */; };
 		9A37140C62047742A6B13E56 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B584EAA5E7EA8F5EF790B4 /* Keychain.swift */; };
+		A3D9B177869085E60760A20F /* Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D130C58DB4A5169F24486A57 /* Demo.swift */; };
 		A4601ED051D149008B835184 /* WatchSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894DD3EF98CDA9A24F039066 /* WatchSync.swift */; };
 		A911124E1FD7DA3553356B10 /* SpeechInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3AAFF9CDC4398914678B74 /* SpeechInput.swift */; };
 		AACBF173450EF3680319BEB0 /* TranslatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267E80D0D2DE70CED8C720B /* TranslatorViewModel.swift */; };
@@ -97,6 +100,7 @@
 		8DCEF9CC08F0C1531E62DE9A /* TranslatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatorView.swift; sourceTree = "<group>"; };
 		A5D0650E86D8A9FE15BC3570 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		A9E47DEE5E3DCF520A52086E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D130C58DB4A5169F24486A57 /* Demo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo.swift; sourceTree = "<group>"; };
 		D20F25FAE878DCCDA6F2C391 /* TwinkleMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwinkleMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -105,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				819209E80488BDA29FC34301 /* AppSettings.swift */,
+				D130C58DB4A5169F24486A57 /* Demo.swift */,
 				5CEEC5E2BB949D19C73A4DCF /* EntryCard.swift */,
 				10B584EAA5E7EA8F5EF790B4 /* Keychain.swift */,
 				082D1470E843C88EA9DF1D36 /* Models.swift */,
@@ -288,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8C8342A948AB402FED7B984 /* AppSettings.swift in Sources */,
+				8C29552AB96113677F80EE6B /* Demo.swift in Sources */,
 				08C89D1B706F0268CB4F93E5 /* EntryCard.swift in Sources */,
 				44B9090321AB01FFA7836A89 /* Keychain.swift in Sources */,
 				1EE2598C0476D50CB9BFECDB /* Models.swift in Sources */,
@@ -307,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C449DCCAE8D118C414F7EC63 /* AppSettings.swift in Sources */,
+				A3D9B177869085E60760A20F /* Demo.swift in Sources */,
 				BC7D79AE69346F826D2BDA3A /* EntryCard.swift in Sources */,
 				9A37140C62047742A6B13E56 /* Keychain.swift in Sources */,
 				5AC76B6BFA1AC901B034B38E /* Models.swift in Sources */,
@@ -328,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CECE873A9D49563352A2895D /* AppSettings.swift in Sources */,
+				97D251400FD0E923217DB8B5 /* Demo.swift in Sources */,
 				74DE6CB5172CBF1F9FAFB72C /* EntryCard.swift in Sources */,
 				C6884938A012A1076ED1B959 /* Keychain.swift in Sources */,
 				21F9D027B31D04B4426F76C6 /* Models.swift in Sources */,

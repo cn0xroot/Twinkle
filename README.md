@@ -4,6 +4,16 @@
 
 AI-powered Chinese ⇄ English translator for **Mac, iPhone and Apple Watch**. Every result is shown side by side — original on top, translation below — with real-time voice translation on the phone.
 
+## Screenshots
+
+<p align="center">
+  <img src="docs/screenshots/mac-main.png" width="360" alt="Main window: bilingual translation cards" />
+  &nbsp;&nbsp;
+  <img src="docs/screenshots/mac-settings.png" width="360" alt="Settings: LLM, model dropdown and read-aloud engines" />
+</p>
+
+<p align="center"><sub>Left: bilingual translation. Right: settings (LLM provider, model dropdown, read-aloud). The iPhone app shares the same SwiftUI interface.</sub></p>
+
 ## Features
 
 - **Bilingual view** – original and translation shown together in one card, streamed token by token.
