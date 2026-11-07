@@ -10,3 +10,6 @@ DerivedData/
 xcuserdata/
 *.xcuserstate
 *.xcresult
+
+# 安装包产物
+dist/
